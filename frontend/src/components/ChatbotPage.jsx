@@ -247,8 +247,8 @@ const ChatbotPage = () => {
       <div
         className={`p-3 rounded-lg max-w-[70%] ${
           message.type === 'user'
-            ? 'bg-blue-600 text-white rounded-br-none'
-            : 'bg-bodyColor text-lightText rounded-bl-none shadow-md'
+            ? 'bg-[#5C6BC0] text-white rounded-br-none'
+            : 'bg-boxBg text-lightText rounded-bl-none shadow-md'
         }`}
       >
         {typeof message.text === 'string' ? (
@@ -258,7 +258,7 @@ const ChatbotPage = () => {
         )}
       </div>
       {message.type === 'user' && (
-        <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center flex-shrink-0">
+        <div className="w-8 h-8 rounded-full bg-[#5C6BC0] flex items-center justify-center flex-shrink-0">
           <FaUser className="text-white" />
         </div>
       )}
@@ -270,7 +270,7 @@ const ChatbotPage = () => {
       <div className="w-8 h-8 rounded-full bg-designColor flex items-center justify-center flex-shrink-0">
         <FaRobot className="text-white" />
       </div>
-      <div className="bg-bodyColor text-lightText p-3 rounded-lg rounded-bl-none shadow-md flex items-center gap-1">
+      <div className="bg-boxBg text-lightText p-3 rounded-lg rounded-bl-none shadow-md flex items-center gap-1">
         <span className="typing-dot"></span>
         <span className="typing-dot"></span>
         <span className="typing-dot"></span>
@@ -291,8 +291,8 @@ const ChatbotPage = () => {
   return (
     <div className="flex flex-col h-screen bg-bodyColor text-lightText">
       {/* Chat header */}
-      <div className="py-4 text-center border-b-[1px] border-b-black">
-        <h1 className="text-2xl font-bold">Probin's AI Assistant (Full Page)</h1>
+      <div className="py-4 text-center border-b-[1px] border-b-gray-700">
+        <h1 className="text-2xl font-bold">Probin's AI Assistant</h1>
       </div>
 
       {/* Chat messages area */}
@@ -307,7 +307,7 @@ const ChatbotPage = () => {
       </div>
 
       {/* Quick Options / Input Area */}
-      <div className="sticky bottom-0 bg-bodyColor border-t-[1px] border-t-black p-4 flex flex-col gap-3">
+      <div className="sticky bottom-0 bg-bodyColor border-t-[1px] border-t-gray-700 p-4 flex flex-col gap-3">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {quickOptions.map((option) => (
             <motion.button
@@ -315,7 +315,7 @@ const ChatbotPage = () => {
               onClick={() => !isTyping && handleOptionClick(option)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="py-2 px-3 bg-designColor text-white rounded-lg shadow-md hover:bg-opacity-80 transition-colors duration-200 text-sm text-center"
+              className="py-2 px-3 bg-designColor text-white rounded-lg shadow-md hover:opacity-80 transition-colors duration-200 text-sm text-center"
               disabled={isTyping}
             >
               {option}
@@ -328,12 +328,12 @@ const ChatbotPage = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Ask me anything about Probin..."
-            className="flex-1 p-3 rounded-lg bg-black bg-opacity-20 border border-gray-700 focus:border-designColor outline-none text-lightText placeholder-gray-500"
+            className="flex-1 p-3 rounded-lg bg-boxBg border border-gray-600 focus:border-designColor outline-none text-lightText placeholder-gray-400"
             disabled={isTyping}
           />
           <motion.button
             type="submit"
-            className="p-3 bg-designColor text-white rounded-lg hover:bg-opacity-80 transition-colors duration-200"
+            className="p-3 bg-designColor text-white rounded-lg hover:opacity-80 transition-colors duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             disabled={isTyping}
