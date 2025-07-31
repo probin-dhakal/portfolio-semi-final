@@ -1,6 +1,3 @@
-{
-  /* Previous code remains the same until Achievement component */
-}
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Title from "./layouts/Title";
@@ -66,28 +63,22 @@ const Resume = () => {
       <div>
         <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
           <p className="text-sm text-designColor tracking-[4px]">
-            2018-Till date
+            2020-Present
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
         </div>
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
-            title="BTech in Electronic & Communication Engineering"
-            subTitle="National Institute of Technology, Silchar (2023-2027)"
-            result="8.46/10 (upto 3rd sem)"
+            title="B.Tech in Electronics and Communication"
+            subTitle="National Institute of Technology, Silchar (2023-Present)"
+            result="8.5/10 (CGPA)"
             des="B.Tech ECE student passionate about electronics, communication, programming, innovation, and solving real-world challenges."
           />
           <ResumeCard
-            title="Science student with PCMB"
-            subTitle="Utopian Academy, Silapathar (2020 - 2022)"
-            result="87%"
-            des="Successfully completed my 12th grade in PCMB with 87%, showcasing a strong foundation in science and academics."
-          />
-          <ResumeCard
-            title="High School Graduate"
-            subTitle="Diamond English School, Dimow (2018 - 2020)"
-            result="85%"
-            des="Successfully completed my 10th grade with 85%, building a strong academic foundation and excelling in core subjects."
+            title="AHSEC"
+            subTitle="Utopian Academy (2020 - 2022)"
+            result="87.2%"
+            des="Successfully completed my 12th grade in PCMB with 87.2%, showcasing a strong foundation in science and academics."
           />
         </div>
       </div>
@@ -110,10 +101,10 @@ const Resume = () => {
         <div className="flex flex-col gap-6">
           <SkillBar skill="HTML 5" percentage={95} />
           <SkillBar skill="CSS" percentage={75} />
-          <SkillBar skill="Javascript" percentage={65} />
+          <SkillBar skill="Javascript" percentage={80} />
           <SkillBar skill="React" percentage={80} />
           <SkillBar skill="Tailwind CSS" percentage={75} />
-          <SkillBar skill="BootStrap" percentage={90} />
+          <SkillBar skill="Bootstrap" percentage={90} />
         </div>
       </div>
       <div className="w-full lgl:w-1/2">
@@ -137,7 +128,7 @@ const Resume = () => {
           <p className="text-sm text-designColor tracking-[4px] uppercase">
             Features
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Others Skill</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Other Skills</h2>
         </div>
         <div className="flex flex-col gap-6">
           <SkillBar skill="C" percentage={50} />
@@ -145,137 +136,76 @@ const Resume = () => {
           <SkillBar skill="Generative AI" percentage={60} />
           <SkillBar skill="Python" percentage={50} />
           <SkillBar skill="Github" percentage={80} />
-          <SkillBar skill="Web Hosting" percentage={80
-            
-          } />
+          <SkillBar skill="Google Cloud" percentage={80} />
           <SkillBar skill="VS Code" percentage={80} />
         </div>
       </div>
     </motion.div>
   );
 
-//   const Experience = () => (
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-//       className="py-12 font-titleFont flex gap-20"
-//     >
-//       <div>
-//         <div className="flex flex-col gap-4">
-//           <p className="text-sm text-designColor tracking-[4px]">2010 - 2022</p>
-//           <h2 className="text-4xl font-bold">Job Experience</h2>
-//         </div>
-//         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-//           <ResumeCard
-//             title="Sr. Software Engineer"
-//             subTitle="Google Out Tech - (2017 - Present)"
-//             result="USA"
-//             des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
-//           />
-//           <ResumeCard
-//             title="Web Developer & Trainer"
-//             subTitle="Apple Developer Team - (2012 - 2016)"
-//             result="MALAYSIA"
-//             des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
-//           />
-//           <ResumeCard
-//             title="Front-end Developer"
-//             subTitle="Nike - (2020 - 2011)"
-//             result="Oman"
-//             des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
-//           />
-//         </div>
-//       </div>
-//       <div>
-//         <div className="flex flex-col gap-4">
-//           <p className="text-sm text-designColor tracking-[4px]">2001 - 2020</p>
-//           <h2 className="text-4xl font-bold">Trainer Experience</h2>
-//         </div>
-//         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-//           <ResumeCard
-//             title="Gym Instructor"
-//             subTitle="Rainbow Gym Center (2015 - 2020)"
-//             result="DHAKA"
-//             des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
-//           />
-//           <ResumeCard
-//             title="Web Developer and Instructor"
-//             subTitle="SuperKing College (2010 - 2014)"
-//             result="CANADA"
-//             des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
-//           />
-//           <ResumeCard
-//             title="School Teacher"
-//             subTitle="Kingstar Secondary School (2001 - 2010)"
-//             result="NEVADA"
-//             des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
-//           />
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
+  const Experience = () => (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="py-12 font-titleFont flex gap-20"
+    >
+      <div>
+        <div className="flex flex-col gap-4">
+          <p className="text-sm text-designColor tracking-[4px]">2025 - Present</p>
+          <h2 className="text-4xl font-bold">Position of Responsibility</h2>
+        </div>
+        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <ResumeCard
+            title="Technical Team Member"
+            subTitle="IEEE Robotics and Automation Society (Apr 2025 – Present)"
+            result="NIT Silchar"
+            des="Actively contribute to technical projects and initiatives within the IEEE Robotics and Automation Society."
+          />
+          <ResumeCard
+            title="Technical Team Member"
+            subTitle="ECO Club, NIT Silchar (May 2025 – Present)"
+            result="NIT Silchar"
+            des="Organized GreenX, a campus-wide sustainability hackathon with 30+ teams promoting eco-tech solutions."
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
 
-//   const Achievement = () => (
-//     <motion.div
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1, transition: { duration: 0.5 } }}
-//       className="py-12 font-titleFont flex gap-20"
-//     >
-//       {/* Achievement content same as before */}
-//       <div>
-//         <div className="py-12 font-titleFont flex flex-col gap-4">
-//           <p className="text-sm text-designColor tracking-[4px]">2007 - 2010</p>
-//           <h2 className="text-4xl font-bold">Company Experience</h2>
-//         </div>
-//         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//         </div>
-//       </div>
-//       <div>
-//         <div className="py-12 font-titleFont flex flex-col gap-4">
-//           <p className="text-sm text-designColor tracking-[4px]">2007 - 2010</p>
-//           <h2 className="text-4xl font-bold">Job Experience</h2>
-//         </div>
-//         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//           <ResumeCard
-//             title="Lorem ipsum dolor sit amet."
-//             subTitle="Lorem ipsum dolor sit amet alternative."
-//             result="Success"
-//             des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora itaque accusamus corporis dolor debitis natus sapiente, voluptates possimus minima totam!"
-//           />
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
+  const Achievement = () => (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="py-12 font-titleFont flex gap-20"
+    >
+      <div>
+        <div className="py-12 font-titleFont flex flex-col gap-4">
+          <p className="text-sm text-designColor tracking-[4px]">2025</p>
+          <h2 className="text-4xl font-bold">Achievements</h2>
+        </div>
+        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <ResumeCard
+            title="Winner, Neurathon 2025"
+            subTitle="NIT Silchar"
+            result="Winner"
+            des="Built Debate Partner (AI debate app) and CALL.E (bulk voice agent) using LLaMA, Flask, Gemini LLM."
+          />
+          <ResumeCard
+            title="Winner, Drone Innovation Challenge"
+            subTitle="Fire Surveillance Drone"
+            result="Winner"
+            des="Designed a smart drone using LoRa, methane sensors, and onboard ML for early fire detection."
+          />
+          <ResumeCard
+            title="Finalist, Google Cloud Agentic AI Hackathon"
+            subTitle="Top 50 Student Teams"
+            result="Finalist"
+            des="Selected among Top 50 student teams out of 700 total (650 professional + 50 student teams)."
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
 
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
@@ -283,8 +213,8 @@ const Resume = () => {
         <Title title="" des="My Resume" />
       </div>
       <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
-          {["education", "skills"].map((tab) => (
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+          {["education", "skills", "experience", "achievement"].map((tab) => (
             <li
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -302,8 +232,8 @@ const Resume = () => {
       <div className="w-full mt-10">
         {activeTab === "education" && <Education />}
         {activeTab === "skills" && <Skills />}
-        {/* {activeTab === "experience" && <Experience />}
-        {activeTab === "achievement" && <Achievement />} */}
+        {activeTab === "experience" && <Experience />}
+        {activeTab === "achievement" && <Achievement />}
       </div>
     </section>
   );
