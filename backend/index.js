@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8002;
 
 app.use(
   cors({
-    origin: "https://probin-portfolio.onrender.com",
+    origin: "https://portfolio-semi-final.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true,
   })
