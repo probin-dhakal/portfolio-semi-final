@@ -13,6 +13,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Added loading state
 
   const emailValidation = () => {
     return String(email)
@@ -22,25 +23,32 @@ const Contact = () => {
 
   const handleSend = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading to true when sending starts
 
     // Basic validation
     if (!name) {
       setErrMsg("Username is required!");
+      setIsLoading(false);
       return;
     } else if (!phone) {
       setErrMsg("Phone number is required!");
+      setIsLoading(false);
       return;
     } else if (!email) {
       setErrMsg("Please provide your email!");
+      setIsLoading(false);
       return;
     } else if (!emailValidation(email)) {
       setErrMsg("Please provide a valid email!");
+      setIsLoading(false);
       return;
     } else if (!subject) {
       setErrMsg("Subject is required!");
+      setIsLoading(false);
       return;
     } else if (!message) {
       setErrMsg("Message is required!");
+      setIsLoading(false);
       return;
     }
 
@@ -75,6 +83,8 @@ const Contact = () => {
     } catch (error) {
       console.error("Error sending message:", error);
       setErrMsg("Failed to send your message. Please try again later.");
+    } finally {
+      setIsLoading(false); // Set loading to false when operation completes
     }
   };
 
@@ -225,9 +235,12 @@ const Contact = () => {
               <div className="w-full">
                 <button
                   onClick={handleSend}
-                  className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
+                  disabled={isLoading} // Disable button when loading
+                  className={`w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent ${
+                    isLoading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
