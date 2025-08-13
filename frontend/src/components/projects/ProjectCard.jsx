@@ -10,7 +10,7 @@ const ProjectsCard = ({ title, des, src, githubLink, liveLink }) => {
       <div className="w-full h-[80%] overflow-hidden rounded-lg">
         <img
           className="w-full object-fill h-60 group-hover:scale-105 duration-300 cursor-pointer"
-          src={src}
+          src="pl.jpeg"
           alt={title}
         />
       </div>
