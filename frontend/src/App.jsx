@@ -22,7 +22,7 @@ function App() {
             <Navbar />
             <div className="max-w-screen-xl mx-auto">
               <Banner />
-{/*               <Chatbot /> {/* Compact chatbot below the Banner component */} */}
+{/*             <Chatbot />  */}
               <Resume />
               <Projects />
               <Contact />
